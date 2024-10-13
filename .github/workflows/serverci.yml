@@ -16,7 +16,7 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
-          go-version: "1.23.0"
+          go-version: "1.23.1"
 
       - name: Run unit tests
         run: cd server && go test ./... -cover
@@ -38,7 +38,7 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
-          go-version: "1.23.0"
+          go-version: "1.23.1"
 
       - name: Check formatting
         run: cd server && test -z $(go fmt ./...)
