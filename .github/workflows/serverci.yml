@@ -19,10 +19,10 @@ jobs:
           go-version: "1.23.0"
 
       - name: Run unit tests
-        run: ./server/scripts/unittests.sh
+        run: cd server && go test ./... -cover
 
       - name: Install Gosec
         run: go install github.com/securego/gosec/v2/cmd/gosec@latest
 
       - name: Run Gosec
-        run: ./server/scripts/gosec.sh
+        run: cd server && gosec ./...
